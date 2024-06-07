@@ -1,2 +1,0 @@
-[console_scripts]
-run-sonar = code_analysis_integration.sonar:main

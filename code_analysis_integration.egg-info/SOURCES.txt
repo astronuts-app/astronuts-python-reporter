@@ -1,9 +1,0 @@
-setup.py
-code_analysis_integration/__init__.py
-code_analysis_integration/sonar.py
-code_analysis_integration.egg-info/PKG-INFO
-code_analysis_integration.egg-info/SOURCES.txt
-code_analysis_integration.egg-info/dependency_links.txt
-code_analysis_integration.egg-info/entry_points.txt
-code_analysis_integration.egg-info/requires.txt
-code_analysis_integration.egg-info/top_level.txt

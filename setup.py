@@ -6,7 +6,6 @@ setup(
     packages=find_packages(),
     install_requires=[
         'pytest',
-        # Add other dependencies here
     ],
     entry_points={
         'console_scripts': [

@@ -15,9 +15,9 @@ def convert_classname_to_filepath(classname):
     return filepath
 
 
-def transform_report(input_file, output_file):
+def transform_report(test_input_file, test_output_file):
     try:
-        tree = ET.parse(input_file)
+        tree = ET.parse(test_input_file)
         root = tree.getroot()
 
         current_path = os.getcwd()
@@ -49,12 +49,12 @@ def transform_report(input_file, output_file):
                                   stacktrace=failure.text or '')
 
         # Write the transformed report
-        os.makedirs(os.path.dirname(output_file), exist_ok=True)
-        with open(output_file, 'wb') as f:
+        os.makedirs(os.path.dirname(test_output_file), exist_ok=True)
+        with open(test_output_file, 'wb') as f:
             tree = ET.ElementTree(sonar_root)
             tree.write(f, encoding='utf-8', xml_declaration=True)
 
-        print(f'Transformed report written to {output_file}')
+        print(f'Transformed report written to {test_output_file}')
     except Exception as e:
         print(f'Error transforming report: {e}')
 

@@ -9,5 +9,5 @@ pip install astronuts-python-reporter
 ```
 ## add this to your workflow file  (after installation is done)
 ```bash
-run-reporter
+astronuts-generate
 ```

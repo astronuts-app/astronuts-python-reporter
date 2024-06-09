@@ -1,15 +1,20 @@
 import subprocess
 import sys
+import os
 
 
 def run_pytest():
-    subprocess.run(['pytest', '--cov=src', '--cov-report=xml:coverage/coverage.xml'], check=True)
+    subprocess.run(['pytest', '--cov=.', '--cov-report=xml:coverage/coverage.xml'], check=True)
     subprocess.run(['pytest', '--junitxml=test-reports/report.xml'], check=True)
+
+
+library_directory = os.path.dirname(os.path.abspath(__file__))
+custom_file_path = os.path.join(library_directory, 'transform_pytest_report.py')
 
 
 def transform_report():
     subprocess.run(
-        ['python3', 'transform_pytest_report.py', 'test-reports/report.xml', 'test-reports/astronuts_report.xml'],
+        ['python3', custom_file_path, 'test-reports/report.xml', 'test-reports/astronuts_report.xml'],
         check=True)
 
 

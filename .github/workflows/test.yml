@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-name: Publish Python Package
-=======
 name: Test
->>>>>>> origin/main
+
 
 # Controls when the workflow will run
 on:

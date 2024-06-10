@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name="astronuts-python-reporter",
-    version="0.0.3",
+    version="0.0.4",
     packages=find_packages(),
     install_requires=[
         'pytest',
     ],
     entry_points={
         'console_scripts': [
-            'astronuts-generate=src.main:main',
+            'astronuts-generates=src.main:main',
         ],
     },
 

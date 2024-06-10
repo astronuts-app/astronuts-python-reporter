@@ -1,0 +1,2 @@
+[console_scripts]
+astronuts-generates = src.main:main

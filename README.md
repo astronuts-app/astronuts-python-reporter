@@ -47,5 +47,5 @@ Then, you can install this dependency in your workflow file (e.g., .yml):
 ```
 
 In this example, the pytest command runs the tests and generates a JUnit XML report. Astronuts Reporter then uses this report to generate a test report. Whenever your workflow runs the command astronuts-generate, Astronuts Reporter will automatically generate a test report.
-
+Note: For now we only support test written with pytest library to generate reports.
 ### Please note that this library is to be used in conjunction with the Astronuts code quality action. You can download the app from the [Github](https://github.com/marketplace/actions/astronuts-code-quality-action).
